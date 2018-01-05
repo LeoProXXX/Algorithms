@@ -62,9 +62,7 @@ namespace Sorting
                 {
                     if (arr[min] > arr[j])
                     {
-                        tmp = arr[min];
-                        arr[min] = arr[j];
-                        arr[j] = tmp;
+                        min = j;
                     }
                 }
 
