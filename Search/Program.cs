@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Search
 {
-    class Program
+    public class Program
     {
-        static int BinarySearchRecursion(int[] arr, int x, int start, int end)
+        public static int BinarySearchRecursion(int[] arr, int x, int start, int end)
         {
             if (start == end)
             {
@@ -26,7 +26,7 @@ namespace Search
             return BinarySearchRecursion(arr, x, start, middle);
         }
 
-        static int BinarySearchIteration(int[] arr, int x)
+        public static int BinarySearchIteration(int[] arr, int x)
         {
             int i = 0;
             int j = arr.Length - 2;

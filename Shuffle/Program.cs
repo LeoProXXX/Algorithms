@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shuffle
 {
-    class Program
+    public class Program
     {
         static List<int> FisherYates(List<int> arr)
         {
@@ -23,7 +23,7 @@ namespace Shuffle
             return result;
         }
 
-        static void Durstenfeld(int[] arr)
+        public static void Durstenfeld(int[] arr)
         {
             var r = new Random();
 

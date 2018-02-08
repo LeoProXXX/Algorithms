@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sorting
 {
-    class Program
+    public class Program
     {
         #region Bubble
         // A function to implement bubble sort
-        static void bubbleSort(int[] arr)
+        public static void BubbleSort(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -52,7 +52,7 @@ namespace Sorting
         #endregion
 
         #region Selection
-        static void selectionSort(int[] arr)
+        public static void SelectionSort(int[] arr)
         {
             int tmp, min;
             for (int i = 0; i < arr.Length - 1; i++)
@@ -74,7 +74,7 @@ namespace Sorting
         #endregion
 
         #region Inserion
-        static void insertionSort(int[] arr)
+        public static void InsertionSort(int[] arr)
         {
             int key, j;
             for (int i = 1; i < arr.Length; i++)
@@ -92,7 +92,7 @@ namespace Sorting
         #endregion
 
         #region Sehll
-        static void shellSort(int[] arr)
+        public static void ShellSort(int[] arr)
         {
             for (int gap = arr.Length / 2; gap > 0; gap /= 2)
             {
@@ -145,7 +145,7 @@ namespace Sorting
             return result;
         }
 
-        static int[] MergeSort(int[] arr)
+        public static int[] MergeSort(int[] arr)
         {
             if (arr.Length > 1)
             {
@@ -165,7 +165,7 @@ namespace Sorting
         #endregion
 
         #region Quick
-        static void QuickSort(int[] arr, int left, int right)//tablica, pierwszy indeks, ostatni indeks
+        public static void QuickSort(int[] arr, int left, int right)//tablica, pierwszy indeks, ostatni indeks
         {
             var i = left;
             var j = right;
@@ -201,7 +201,7 @@ namespace Sorting
         #endregion
 
         #region Bucket
-        static void bucketSort(int[] arr)
+        public static void BucketSort(int[] arr)
         {
             int min = arr.Min();
             int max = arr.Max();
@@ -230,7 +230,7 @@ namespace Sorting
         #endregion
 
         #region Counting
-        static void CountingSort(int[] arr)
+        public static void CountingSort(int[] arr)
         {
             int max = arr.Max();
             int min = arr.Min();
@@ -256,7 +256,7 @@ namespace Sorting
         #endregion
 
         #region Radix
-        static void radixSort(int[] arr, int podstawa = 10)
+        public static void RadixSort(int[] arr, int podstawa = 10)
         {
             int[] B = new int[arr.Length];
             int max = arr.Max();
@@ -282,7 +282,7 @@ namespace Sorting
             }
         }
         
-        /*Niedziala
+        /*Don't work
         static void radixSortmsd(int[] arr, int podstawa = 10)//LSD
         {
             int[] B = new int[arr.Length];
@@ -340,33 +340,27 @@ namespace Sorting
             int[] arr = { 64, 25, 12, 22, 11 };
             int[] arrTmp;
 
-            Console.WriteLine("bubbleSort");
+            Console.WriteLine("BubbleSort");
             arrTmp = (int[])arr.Clone();
-            bubbleSort(arrTmp);
+            BubbleSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
-            Console.WriteLine("bubbleSort");
+            Console.WriteLine("SelectionSort");
             arrTmp = (int[])arr.Clone();
-            bubbleSortO(arrTmp);
+            SelectionSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
-            Console.WriteLine("selectionSort");
+            Console.WriteLine("InsertionSort");
             arrTmp = (int[])arr.Clone();
-            selectionSort(arrTmp);
+            InsertionSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
-            Console.WriteLine("insertionSort");
+            Console.WriteLine("ShellSort");
             arrTmp = (int[])arr.Clone();
-            insertionSort(arrTmp);
-            Console.WriteLine(string.Join(" ", arrTmp));
-            Console.WriteLine();
-
-            Console.WriteLine("shellSort");
-            arrTmp = (int[])arr.Clone();
-            shellSort(arrTmp);
+            ShellSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
@@ -382,9 +376,9 @@ namespace Sorting
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
-            Console.WriteLine("bucketSort");
+            Console.WriteLine("BucketSort");
             arrTmp = (int[])arr.Clone();
-            bucketSort(arrTmp);
+            BucketSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
@@ -394,9 +388,9 @@ namespace Sorting
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
-            Console.WriteLine("radixSortLsd");
+            Console.WriteLine("RadixSortLsd");
             arrTmp = (int[])arr.Clone();
-            radixSort(arrTmp);
+            RadixSort(arrTmp);
             Console.WriteLine(string.Join(" ", arrTmp));
             Console.WriteLine();
 
